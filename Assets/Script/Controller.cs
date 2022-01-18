@@ -37,6 +37,7 @@ public class Controller : MonoBehaviour
     void Update()
     {
         RedWin();
+        GreenWin();
         print(GameRunning);
         if (GameRunning == false)
 		{
@@ -145,6 +146,50 @@ public class Controller : MonoBehaviour
         if (Cube7.GetComponent<MeshRenderer>().material.color == Color.red && Cube5.GetComponent<MeshRenderer>().material.color == Color.red && Cube3.GetComponent<MeshRenderer>().material.color == Color.red)
         {
             Winner = 1;
+            GameRunning = false;
+        }
+    }
+
+    private void GreenWin()
+	{
+        if (Cube1.GetComponent<MeshRenderer>().material.color == Color.green && Cube2.GetComponent<MeshRenderer>().material.color == Color.green && Cube3.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube4.GetComponent<MeshRenderer>().material.color == Color.green && Cube5.GetComponent<MeshRenderer>().material.color == Color.green && Cube6.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube7.GetComponent<MeshRenderer>().material.color == Color.green && Cube8.GetComponent<MeshRenderer>().material.color == Color.green && Cube9.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube1.GetComponent<MeshRenderer>().material.color == Color.green && Cube4.GetComponent<MeshRenderer>().material.color == Color.green && Cube7.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube2.GetComponent<MeshRenderer>().material.color == Color.green && Cube5.GetComponent<MeshRenderer>().material.color == Color.green && Cube8.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube3.GetComponent<MeshRenderer>().material.color == Color.green && Cube6.GetComponent<MeshRenderer>().material.color == Color.green && Cube9.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube1.GetComponent<MeshRenderer>().material.color == Color.green && Cube5.GetComponent<MeshRenderer>().material.color == Color.green && Cube9.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
+            GameRunning = false;
+        }
+        if (Cube7.GetComponent<MeshRenderer>().material.color == Color.green && Cube5.GetComponent<MeshRenderer>().material.color == Color.green && Cube3.GetComponent<MeshRenderer>().material.color == Color.green)
+        {
+            Winner = 2;
             GameRunning = false;
         }
     }
